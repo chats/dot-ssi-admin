@@ -1,0 +1,44 @@
+:root {
+    font-family: "Open Sans", "Noto Sans Thai", sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+
+    /*  color-scheme: light dark;*/
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    margin: 0;
+}
+
+.brand {
+    /*background:#584A95;*/
+    background: #303f9f;
+    position: relative;
+    height: 64px;
+    padding-left: 24px;
+    overflow: hidden;
+    line-height: 64px;
+    transition: all 0.3s;
+}
+
+.brand img {
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    vertical-align: middle;
+}
+
+.brand h1 {
+    display: inline-block;
+    margin: 0 0 0 8px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: Avenir, Helvetica Neue, Arial, Helvetica, sans-serif;
+    vertical-align: middle;
+}

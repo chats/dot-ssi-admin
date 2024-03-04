@@ -1,0 +1,41 @@
+.page-header {
+    padding: 0 0 16px !important;
+}
+
+.page-header-heading {
+    display: flex;
+    justify-content: space-between;
+}
+
+.page-header-heading-left {
+    display: flex;
+    align-items: center;
+    margin: 4px 0;
+    overflow: hidden;
+}
+
+.page-header-heading-right {
+    margin: 4px 0;
+    white-space: nowrap;
+}
+
+.page-header-heading-title {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+.page-header-back {
+    margin-right: 16px;
+    font-size: 16px;
+    line-height: 1;
+
+}
+
+.page-header-back-button {
+    border: 0;
+    background: transparent;
+    padding: 0;
+    line-height: inherit;
+    display: inline-block;
+}

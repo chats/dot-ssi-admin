@@ -1,0 +1,17 @@
+.dynamic-delete-button {
+    color: #e40909;
+    position: relative;
+    top: 4px;
+    margin: 0 8px;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.schema-input {
+    width: 300px;
+}
+
+.add-attribute-button {
+    margin-left: 16.666666667%
+}
