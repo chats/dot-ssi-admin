@@ -35,6 +35,8 @@ const formItemLayoutWithOutLabel = {
 const CreateCredDefs: React.FC = () => {
     const AgentUrl = import.meta.env.VITE_ISSUER_API;
     const AgentKey = import.meta.env.VITE_ISSUER_KEY;
+    //const AgentUrl = import.meta.env.VITE_EXAM_API;
+    //const AgentKey = import.meta.env.VITE_EXAM_KEY;
 
     const [loading, setLoading] = useState(true);
     const [schemas, setSchemas] = useState([]);

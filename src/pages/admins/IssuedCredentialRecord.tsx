@@ -5,23 +5,25 @@ import { EditFilled, DeleteFilled } from "@ant-design/icons";
 import { useEffect, useState } from "react";
 import axios from "axios";
 
-const AgentUrl = import.meta.env.VITE_VERIFIER_API;
-const AgentKey = import.meta.env.VITE_VERIFIER_KEY;
+//const AgentUrl = import.meta.env.VITE_EXAM_API;
+//const AgentKey = import.meta.env.VITE_EXAM_KEY;
+const AgentUrl = import.meta.env.VITE_ISSUER_API;
+const AgentKey = import.meta.env.VITE_ISSUER_KEY;
 
-const ProofRecords: React.FC = () => {
+const IssuedCredentialRecords: React.FC = () => {
     const [loading, setloading] = useState(true);
     const [proofRecords, setProofRecords] = useState([]);
 
-    const handleDelete = (pres_ex_id: string) => {
-        console.log("delete " + pres_ex_id);
+    const handleDelete = (cred_ex_id: string) => {
+        console.log("delete " + cred_ex_id);
         axios
-            .delete(`${AgentUrl}/present-proof/records/${pres_ex_id}`, {
+            .delete(`${AgentUrl}/issue-credential/records/${cred_ex_id}`, {
                 signal: AbortSignal.timeout(5000),
                 headers: { apikey: AgentKey },
             })
             .then(() => {
                 message.success(
-                    `Presentation exchange id ${pres_ex_id} deleted`
+                    `Presentation exchange id ${cred_ex_id} deleted`
                 );
             })
             .catch((error) => {
@@ -41,9 +43,9 @@ const ProofRecords: React.FC = () => {
             width: "100px",
         },
         {
-            title: "Presentation Exchange ID",
-            dataIndex: "pres_ex_id",
-            key: "pres_ex_id",
+            title: "Credential Exchange ID",
+            dataIndex: "cred_ex_id",
+            key: "cred_ex_id",
         },
         { title: "Name", dataIndex: "name", key: "name" },
         { title: "Created At", dataIndex: "created_at", key: "created_at" },
@@ -70,7 +72,7 @@ const ProofRecords: React.FC = () => {
                         icon={<DeleteFilled />}
                         danger
                         size="large"
-                        onClick={() => handleDelete(record["pres_ex_id"])}
+                        onClick={() => handleDelete(record["cred_ex_id"])}
                     />
                 </div>
             ),
@@ -81,8 +83,8 @@ const ProofRecords: React.FC = () => {
         ? []
         : proofRecords.map((row, index) => ({
               index: index + 1,
-              pres_ex_id: row["presentation_exchange_id"],
-              name: row["presentation_request"]["name"],
+              cred_ex_id: row["credential_exchange_id"],
+              name: row["credential_proposal_dict"]["comment"],
               created_at: row["created_at"],
               state: row["state"],
               key: row["presentation_exchange_id"],
@@ -90,8 +92,9 @@ const ProofRecords: React.FC = () => {
 
     useEffect(() => {
         axios
-            .get(`${AgentUrl}/present-proof/records`, {
+            .get(`${AgentUrl}/issue-credential/records`, {
                 signal: AbortSignal.timeout(5000),
+                headers: { apikey: AgentKey },
             })
             .then((res) => {
                 setProofRecords(res.data["results"]);
@@ -120,4 +123,4 @@ const ProofRecords: React.FC = () => {
     );
 };
 
-export default ProofRecords;
+export default IssuedCredentialRecords;

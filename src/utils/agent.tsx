@@ -150,6 +150,7 @@ export function createOffer(
     data: any,
     comment: string = ""
 ) {
+    console.log("comment = " + comment);
     const attributes = createAttributes(data);
     const offer = {
         comment: comment,
@@ -305,3 +306,14 @@ export function createOfferV2(
     return offer;
 }
 */
+
+export async function requestExamData(url: string, key: string) {
+    try {
+        const response = await axios.get(url, {
+            headers: { "X-Auth": key },
+        });
+        return response.data;
+    } catch (error) {
+        console.log(error);
+    }
+}

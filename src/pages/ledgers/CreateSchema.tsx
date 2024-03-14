@@ -8,6 +8,8 @@ import { createSchema } from "../../utils/agent";
 
 const AgentUrl = import.meta.env.VITE_ISSUER_API;
 const AgentKey = import.meta.env.VITE_ISSUER_KEY;
+//const AgentUrl = import.meta.env.VITE_EXAM_API;
+//const AgentKey = import.meta.env.VITE_EXAM_KEY;
 
 const formItemLayout = {
     labelCol: {

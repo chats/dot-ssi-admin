@@ -6,7 +6,9 @@ import {
     Error404,
     ExamCert,
     ExamSeat,
+    ExamSeatDemo,
     HomePage,
+    IssuedCredentialRecords,
     ProofRecords,
     SchemaPage,
     TouristGuideLicense,
@@ -44,6 +46,10 @@ const AppRouter: React.FC = () => {
             element: <ConnectionPage />,
         },
         {
+            path: "/issue-cred-records",
+            element: <IssuedCredentialRecords />,
+        },
+        {
             path: "/proof-records",
             element: <ProofRecords />,
         },
@@ -57,6 +63,10 @@ const AppRouter: React.FC = () => {
         {
             path: "/exam-seat",
             element: <ExamSeat />,
+        },
+        {
+            path: "/exam-demo",
+            element: <ExamSeatDemo />,
         },
         {
             path: "/exam-cert",

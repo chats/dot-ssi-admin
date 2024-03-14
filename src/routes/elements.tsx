@@ -13,6 +13,11 @@ export const HomePage = Loadable(lazy(() => import("../pages/HomePage")));
 export const ConnectionPage = Loadable(
     lazy(() => import("../pages/admins/ConnectionPage"))
 );
+
+export const IssuedCredentialRecords = Loadable(
+    lazy(() => import("../pages/admins/IssuedCredentialRecord"))
+);
+
 export const ProofRecords = Loadable(
     lazy(() => import("../pages/admins/ProofRecords"))
 );
@@ -28,6 +33,9 @@ export const TouristGuideLicense = Loadable(
 
 export const ExamSeat = Loadable(lazy(() => import("../pages/vcs/ExamSeat")));
 export const ExamCert = Loadable(lazy(() => import("../pages/vcs/ExamCert")));
+export const ExamSeatDemo = Loadable(
+    lazy(() => import("../pages/vcs/ExamSeatDemo"))
+);
 
 export const VerifyTouristGuideLicense = Loadable(
     lazy(() => import("../pages/proofs/VerifyTouristGuideLicense"))

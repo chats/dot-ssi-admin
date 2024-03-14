@@ -106,7 +106,7 @@ const VerifyTouristGuideLicense: React.FC = () => {
 
     const credentialVerified = async (pres_ex_id: string) => {
         //setLoading(true)
-        const revealed = await getRevealedAttrs(AgentUrl, pres_ex_id);
+        const revealed = await getRevealedAttrs(AgentUrl, AgentKey, pres_ex_id);
         setFormValues(revealed);
         //setIndex(2)
         setLoading(false);

@@ -27,8 +27,9 @@ const navigation = [
         icon: <CreditCardOutlined />,
         children: [
             //{ label: 'Person', key: '/person', },
-            { label: "Exam Seat", key: "/exam-seat" },
-            { label: "Exam Certificate", key: "/exam-cert" },
+            //{ label: "Exam Seat", key: "/exam-seat" },
+            { label: "Exam Demo", key: "/exam-demo" },
+            //{ label: "Exam Certificate", key: "/exam-cert" },
             { label: "Tourist Guide License", key: "/tourist-guide-license" },
             //{ label: 'E-Exam Certificate', key: '/e-exam-cert',}
         ],
@@ -50,6 +51,7 @@ const navigation = [
         children: [
             { label: "Connections", key: "/connections" },
             { label: "Credential Offers", key: "/credential-offers" },
+            { label: "Issued Credential Records", key: "/issue-cred-records" },
             { label: "Proofs Records", key: "/proof-records" },
         ],
     },
